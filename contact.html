@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salad - Contact Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #ffffff;
+  --bg-section-grey: #f7f8fa;
+  --text-dark: #1a1a1a;
+  --text-light: #8e8e8e;
+  --accent-red: #d94343;
+  --accent-green: #d1ff7a;
+  --footer-green: #d6ff82;
+  --footer-text: #2c351a;
+  --soft-green-bg: #f3fded;
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+html { scroll-behavior: smooth; }
+* { box-sizing: border-box; }
+body { background: var(--bg); margin: 0; }
+.site-container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+}
+.site-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; margin-bottom: 60px; position: relative; z-index: 100; }
+.logo { font-weight: 700; color: var(--accent-red); font-size: 26px; letter-spacing: 0.5px; }
+.main-nav { display: flex; gap: 60px; color: var(--text-dark); font-weight: 500; font-size: 16px; }
+.main-nav a { cursor: pointer; text-decoration: none; color: inherit; }
+.icons { display: flex; align-items: center; gap: 24px; }
+.icons svg { width: 24px; height: 24px; stroke-width: 2; stroke: var(--text-dark); fill: none; }
+.page-content { padding: 80px 20px 60px; }
+.menu-title { text-align:center; font-size:40px; margin:8px 0; font-weight:800; color: var(--text-dark); }
+.menu-title .accent { color:var(--accent-red); }
+.menu-sub { text-align:center; color: var(--text-light); max-width:600px; margin:6px auto 40px; line-height: 1.6; }
+.contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; align-items: flex-start; }
+.contact-form { background: var(--bg-section-grey); padding: 40px; border-radius: 20px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-dark); }
+.form-group input, .form-group textarea { width: 100%; padding: 14px; border-radius: 12px; border: 1px solid #ddd; font-family: 'Manrope', sans-serif; font-size: 15px; }
+.form-group textarea { resize: vertical; min-height: 120px; }
+.contact-info h3 { font-size: 24px; font-weight: 700; margin-top: 0; margin-bottom: 20px; }
+.contact-info p { line-height: 1.8; color: var(--text-light); margin-bottom: 24px; }
+.btn-submit { background: var(--accent-green); border: none; width: 100%; padding: 15px 28px; border-radius: 14px; font-weight: 700; cursor: pointer; font-size: 16px; box-shadow: 0 10px 25px rgba(209, 255, 122, 0.5); transition: all 0.3s ease; }
+.btn-submit:hover { filter: brightness(1.1); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(209, 255, 122, 0.6); }
+
+/* Footer */
+.site-footer{ width: 100%; background: var(--footer-green); color: var(--footer-text); margin-top: 120px; padding-top: 60px; position: relative; overflow: hidden; }
+.site-footer::before, .site-footer::after { content: ''; position: absolute; background-color: var(--bg); width: 80px; height: 80px; border-radius: 50%; bottom: -40px; }
+.site-footer::before { left: -40px; }
+.site-footer::after { right: -40px; }
+.footer-content-wrapper { width: 1200px; max-width: 100%; margin: 0 auto; padding: 0 50px 30px; }
+.footer-grid{ display: grid; grid-template-columns: 2fr 1.5fr 1fr 1fr; gap: 30px; margin-bottom: 50px; }
+.footer-grid strong{ display:block; margin-bottom: 16px; font-weight: 700; font-size: 16px; }
+.footer-grid p, .footer-grid a { margin: 0 0 10px; line-height: 1.8; color: var(--footer-text); text-decoration: none; font-size: 15px; font-weight: 500; }
+.footer-grid a { display: block; }
+.footer-grid a:hover { text-decoration: underline; }
+.social-icons { display: flex; gap: 12px; align-items: center; }
+.social-icon { width: 28px; height: 28px; background: #000; border-radius: 50%; transition: transform 0.2s ease; }
+.social-icon:hover { transform: scale(1.1); }
+.sub-footer { border-top: 1px solid rgba(0,0,0,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; font-weight: 500; color: var(--footer-text); opacity: 0.8; }
+.sub-footer-links { display: flex; flex-wrap: wrap; gap: 24px; }
+.sub-footer-links a { color: var(--footer-text); text-decoration: none; }
+.sub-footer-links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<div class="site-container">
+    <header class="site-header">
+        <div class="logo">Salad</div>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="index.html#shop-section">Shop</a>
+            <a href="recipe.html">Recipe</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <svg viewBox="0 0 24 24"><path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"></path><path d="M21 21L16.65 16.65"></path></svg>
+            <svg viewBox="0 0 24 24"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+        </div>
+    </header>
+    <main>
+        <section class="page-content">
+            <h2 class="menu-title">Get In <span class="accent">Touch</span></h2>
+            <p class="menu-sub">Have a question, feedback, or a special request? We'd love to hear from you. Fill out the form below or reach out to us directly.</p>
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Our Information</h3>
+                    <p><strong>Address:</strong><br>123 Salad Street, Foodie Town, <br>NY 50782</p>
+                    <p><strong>Email:</strong><br>info@saladfit.com</p>
+                    <p><strong>Phone:</strong><br>+1 (555) 123-4567</p>
+                    <h3>Opening Hours</h3>
+                    <p>Mon – Fri: 11:00 AM – 11:00 PM<br>Sat – Sun: 12:00 PM – 12:00 AM</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</div><!-- site-container ENDS HERE -->
+
+<footer class="site-footer">
+    <div class="footer-content-wrapper">
+        <div class="footer-grid">
+          <div><strong>Address</strong><p>123 Salad Street, Foodie Town, <br>NY 50789<br>+1 (555) 123-4567<br>info@saladfit.com</p></div>
+          <div><strong>Opening hours</strong><p>Mon – Fri: 11:00 AM – 11:00 PM<br>Sat – Sun: 12:00 PM – 12:00 AM</p></div>
+          <div><strong>Quick links</strong><a href="#">Home</a><a href="#">About</a><a href="#">Contact</a></div>
+          <div><strong>Social Media</strong><div class="social-icons"><a href="#" class="social-icon"></a><a href="#" class="social-icon"></a><a href="#" class="social-icon"></a><a href="#" class="social-icon"></a><a href="#" class="social-icon"></a></div></div>
+        </div>
+        <div class="sub-footer">
+          <span>© 2023 Designed by uiuxzad</span>
+          <div class="sub-footer-links"><a href="#">Terms of Use</a><a href="#">Privacy Policy</a><a href="#">Cookie Settings / Do Not Sell My Personal Information</a></div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
